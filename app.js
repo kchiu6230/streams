@@ -1,3 +1,4 @@
+// Global dependencies
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -5,16 +6,24 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Local dependencies
 var router = require('./routes');
 
+//Create app instance
 var app = express();
 
 // view engine setup
+// Set the location of our views directory
 app.set('views', path.join(__dirname, 'views'));
+// Set jade as the default view engine
 app.set('view engine', 'jade');
+/*
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+Middlewares setup
+Uncomment after placing your favicon in /public
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+*/
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
