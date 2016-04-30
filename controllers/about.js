@@ -1,11 +1,9 @@
-//About page
-
+//About controller
 var About = {
     
-    index: function(req, res){ //req = request, res = response
-        res.send('This should be the about pageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!');
+    index: function(req,res){
+        res.render('about/index');
     }
-    
 };
 
-module.exports = About; 
+module.exports = About;
