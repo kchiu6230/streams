@@ -8,5 +8,5 @@ module.exports = {
     About: About, //second "About" follows the variable name
     Home: Home,
     Users: Users,
-    Seardch: Search
+    Search: Search
 };
