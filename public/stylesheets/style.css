@@ -1,10 +1,36 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Raleway", Raleway, Helvetica, Arial, sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+blockquote {
+  color:#ecf0f1;
+}
+
+small {
+  color:#27ae60;
+}
+
+h1{
+  text-align: right; 
 }
 
 a {
-  color: #00B7FF;
+  color: #ecf0f1;
+  font:"Raleway", Raleway;
+}
+article {
+  text-align:right;
+  display: block;
+  font-weight:lighter;
+  font:"Raleway", Raleway;
+  color:#E4F1FE;
+  font-size: 120%;
+}
+span {
+  color: #3498db;
 }
