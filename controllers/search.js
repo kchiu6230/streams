@@ -12,10 +12,19 @@ var Search = {
         var client = Helpers.getTwitterClient();
         
         var params = {
-            q: hashtag
+            q: hashtag,
+            lang: 'en', // only english tweets
+            result_type: 'mixed', // most popular + recent
+            count: 30 // max number of tweets
         };
         
         client.get('search/tweets', params, function(err, tweets){
+            if (err){
+                console.error(err);
+                next(err);
+                return;
+            }
+            
             var data = {
                 searchTerm: hashtag,
                 numItems: 0
