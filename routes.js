@@ -1,4 +1,3 @@
-//If "can't find", then error in routes (this file)
 // Local dependencies
 var controllers = require('./controllers');
 
@@ -12,7 +11,8 @@ var Router = {
         // About page
         app.get('/about', controllers.About.index);
 
-        //Search
+        
+        // Search
         app.get('/search', controllers.Search.index);
     }
 
