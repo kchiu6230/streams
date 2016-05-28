@@ -13,12 +13,13 @@
     </form>
 </div>
 
-<h4>Search Results (172)</h4>
+{% if numItems %}
+<h4>Search for "{{ searchTerm }}" ({{ numItems}})</h4>
 <hr>
 
 <div class="container">
   <div class="row tweets-container">
-    {% for i in range(0, 10) %}
+    {% for item in items %}
       {% include "search/_item.html" %}
     {% endfor %}
   </div>
@@ -28,6 +29,8 @@
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <strong>Copyrighted © 2016 Kevin Chiu & the NYOT Team. All Rights Reserved</strong>
 </div>
+
+{% endif %}
 
 {% endblock %}
 
